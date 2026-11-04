@@ -1,0 +1,218 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f4f6fb;
+    color: #202438;
+    min-height: 100vh;
+}
+
+.topbar {
+    background: #171b2e;
+    color: white;
+    padding: 20px 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.brand {
+    font-size: 25px;
+    font-weight: bold;
+    letter-spacing: -1px;
+}
+
+.brand span {
+    color: #8b7cff;
+}
+
+.subtitle {
+    color: #b8bdd0;
+    font-size: 14px;
+}
+
+.container {
+    max-width: 1250px;
+    margin: 45px auto;
+    padding: 0 25px;
+}
+
+.heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 35px;
+    gap: 20px;
+}
+
+.eyebrow {
+    color: #7565e8;
+    font-size: 11px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+}
+
+.heading h1 {
+    font-size: 32px;
+    margin-bottom: 8px;
+}
+
+.description {
+    color: #777f95;
+    font-size: 14px;
+}
+
+.wip-settings {
+    background: white;
+    padding: 15px 20px;
+    border-radius: 12px;
+    box-shadow: 0 3px 15px #1b254010;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.wip-settings label {
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.wip-settings input {
+    width: 55px;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 16px;
+    text-align: center;
+}
+
+.board {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 20px;
+    align-items: start;
+}
+
+.column {
+    background: #e9edf5;
+    border-radius: 14px;
+    padding: 18px;
+    min-height: 400px;
+}
+
+.column-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.column-heading h2 {
+    font-size: 16px;
+}
+
+.count {
+    background: white;
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.wip-message {
+    font-size: 12px;
+    color: #16845b;
+    background: #d9f5e9;
+    padding: 9px;
+    border-radius: 7px;
+    margin-bottom: 15px;
+}
+
+.wip-message.warning {
+    color: #a45b00;
+    background: #fff0d4;
+}
+
+.task-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.task-card {
+    background: white;
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 0 2px 8px #2024380a;
+    border: 1px solid #e8eaf1;
+}
+
+.task-card h3 {
+    font-size: 14px;
+    margin-bottom: 8px;
+}
+
+.task-card p {
+    font-size: 12px;
+    color: #777f95;
+    line-height: 1.5;
+}
+
+.task-actions {
+    display: flex;
+    gap: 7px;
+    margin-top: 14px;
+    flex-wrap: wrap;
+}
+
+.task-actions button,
+.add-task {
+    border: none;
+    border-radius: 6px;
+    padding: 8px 11px;
+    font-size: 12px;
+    cursor: pointer;
+}
+
+.task-actions button {
+    background: #eeeaff;
+    color: #6554d9;
+}
+
+.task-actions button:hover {
+    background: #ded8ff;
+}
+
+.add-task {
+    width: 100%;
+    margin-top: 15px;
+    padding: 12px;
+    background: white;
+    color: #6554d9;
+    font-weight: bold;
+}
+
+.add-task:hover {
+    background: #f5f2ff;
+}
+
+@media (max-width: 800px) {
+    .board {
+        grid-template-columns: 1fr;
+    }
+
+    .heading {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .topbar {
+        gap: 10px;
+        flex-wrap: wrap;
+    }
+}

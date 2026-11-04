@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FlowBoard | WIP Manager</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="topbar">
+        <div class="brand">Flow<span>Board</span></div>
+        <div class="subtitle">Kanban Work Management</div>
+    </header>
+
+    <main class="container">
+        <section class="heading">
+            <div>
+                <p class="eyebrow">PROJECT WORKSPACE</p>
+                <h1>My Kanban Board</h1>
+                <p class="description">Manage tasks. Control workload. Maintain flow.</p>
+            </div>
+
+            <div class="wip-settings">
+                <label for="wipLimit">WIP Limit</label>
+                <input type="number" id="wipLimit" min="1" value="3">
+            </div>
+        </section>
+
+        <section class="board">
+
+            <div class="column" id="todoColumn">
+                <div class="column-heading">
+                    <h2>To Do</h2>
+                    <span class="count" id="todoCount">0</span>
+                </div>
+                <div class="task-list" id="todoList"></div>
+                <button class="add-task" id="addTask">+ Add Task</button>
+            </div>
+
+            <div class="column progress-column" id="progressColumn">
+                <div class="column-heading">
+                    <h2>In Progress</h2>
+                    <span class="count" id="progressCount">0 / 3</span>
+                </div>
+                <div class="wip-message" id="wipMessage">
+                    Work capacity available
+                </div>
+                <div class="task-list" id="progressList"></div>
+            </div>
+
+            <div class="column" id="doneColumn">
+                <div class="column-heading">
+                    <h2>Done</h2>
+                    <span class="count" id="doneCount">0</span>
+                </div>
+                <div class="task-list" id="doneList"></div>
+            </div>
+
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
